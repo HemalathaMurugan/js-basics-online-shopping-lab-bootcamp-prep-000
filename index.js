@@ -36,9 +36,8 @@ function removeFromCart(itemName) {
       x = getCart()[i];
     }
   }
-  var indexOfItem = cart.indexOf(itemName);
-  var y=getCart().splice(indexOfItem,1);
-  return x ?  y : 'That item is not in your cart.';
+ 
+  return x ?  removeItemFromCart(x) : 'That item is not in your cart.';
 }
 
 function placeOrder(cardNumber) {
